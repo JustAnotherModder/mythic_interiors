@@ -1,5 +1,4 @@
-
-
+-- Thanks Stroudy For This <3
 function CreateTier1HouseFurnished(spawn, isBackdoor)
     local objects = {}
 
@@ -139,6 +138,7 @@ function CreateTier1HouseFurnished(spawn, isBackdoor)
 	FreezeEntityPosition(chair5,true)
 	FreezeEntityPosition(chair6,true)
 	FreezeEntityPosition(plant4,true)
+	FreezeEntityPosition(storage,true)
 	FreezeEntityPosition(storage2,true)
 	FreezeEntityPosition(basket,true)
 	FreezeEntityPosition(wardrobe,true)
