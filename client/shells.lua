@@ -11,6 +11,8 @@ function CreateHotel(spawn)
     table.insert(objects, curtains)
     local window = CreateObject(`V_49_MotelMP_Curtains`, spawn.x + 1.43190000, spawn.y + (-3.92315100), spawn.z + 2.29329600)
     table.insert(objects, window)
+
+    return { objects, POIOffsets }
 end
 
 function CreateTier1House(spawn, isBackdoor)
@@ -33,7 +35,7 @@ function CreateTier1House(spawn, isBackdoor)
         TeleportToInterior(spawn.x + POIOffsets.backdoor.x, spawn.y + POIOffsets.backdoor.y, spawn.z + 1.5, POIOffsets.backdoor.h + 180)
     end
 
-    return objects, POIOffsets
+    return { objects, POIOffsets }
 end
 
 function CreateTier2House(spawn, isBackdoor)
@@ -57,7 +59,7 @@ function CreateTier2House(spawn, isBackdoor)
         TeleportToInterior(spawn.x + 0.88999176025391, spawn.y + 4.3798828125, spawn.z + 1.5, spawn.h)
     end
 
-    return objects, POIOffsets
+    return { objects, POIOffsets }
 end
 
 function CreateTier3House(spawn, isBackdoor)
@@ -75,6 +77,6 @@ function CreateTier3House(spawn, isBackdoor)
     else
         TeleportToInterior(spawn.x + 0.88999176025391, spawn.y + 4.3798828125, spawn.z + 1.5, spawn.h)
     end
-    
-    return objects, POIOffsets
+
+    return { objects, POIOffsets }
 end

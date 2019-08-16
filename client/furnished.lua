@@ -1,4 +1,5 @@
--- Thanks Stroudy For This <3
+
+
 function CreateTier1HouseFurnished(spawn, isBackdoor)
     local objects = {}
 
@@ -9,7 +10,7 @@ function CreateTier1HouseFurnished(spawn, isBackdoor)
     local shell = CreateObject(`playerhouse_tier1_full`, spawn.x, spawn.y, spawn.z, false, false, false)
     FreezeEntityPosition(shell, true)
     table.insert(objects, shell)
-    local dt = CreateObject(`V_16_DT`, spawn.x-1.21854400, spawn.y-1.04389600, spawn.z + 1.39068600, false, false, false)
+    local dt = CreateObject(`V_16_DT`,spawn.x-1.21854400,spawn.y-1.04389600,spawn.z+1.39068600,false,false,false)
 	local mpmid01 = CreateObject(`V_16_mpmidapart01`,spawn.x+0.52447510,spawn.y-5.04953700,spawn.z+1.32,false,false,false)
 	local mpmid09 = CreateObject(`V_16_mpmidapart09`,spawn.x+0.82202150,spawn.y+2.29612000,spawn.z+1.88,false,false,false)
 	local mpmid07 = CreateObject(`V_16_mpmidapart07`,spawn.x-1.91445900,spawn.y-6.61911300,spawn.z+1.45,false,false,false)
@@ -137,8 +138,8 @@ function CreateTier1HouseFurnished(spawn, isBackdoor)
 	FreezeEntityPosition(chair4,true)
 	FreezeEntityPosition(chair5,true)
 	FreezeEntityPosition(chair6,true)
-	FreezeEntityPosition(plant4,true)
-	FreezeEntityPosition(storage,true)
+    FreezeEntityPosition(plant4,true)
+    FreezeEntityPosition(storage,true)
 	FreezeEntityPosition(storage2,true)
 	FreezeEntityPosition(basket,true)
 	FreezeEntityPosition(wardrobe,true)
@@ -229,5 +230,5 @@ function CreateTier1HouseFurnished(spawn, isBackdoor)
         TeleportToInterior(spawn.x + 0.88999176025391, spawn.y + 4.3798828125, spawn.z + 1.5, spawn.h)
     end
 
-    return objects, POIOffsets
+    return { objects, POIOffsets }
 end

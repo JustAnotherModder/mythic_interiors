@@ -30,7 +30,9 @@ NetworkOverrideClockTime(23, 0, 0) -- initial set time
 local coords = property.enter -- This is from data that I am storing in my realestate script for properties that're player ownable. Just door locations really
 local extra = 25 - coords['z'] -- Doing the math to figure out how much we'd need to subtract from the Z to get to z = -25
 coords = { x = coords['x'], y = coords['y'], z = (coords['z'] - 25) - extra } -- We're than getting the offset from the property coords so we can spawn it underground. Offsets may need to be tweaked depending on terrain & interior
-houseObj, POIOffsets = exports['mythic_interiors']:CreateTier1House(coords, isBackdoor) -- Spawning the interior
+local data = exports['mythic_interiors']:CreateTier1House(coords, isBackdoor) -- Spawning the interior
+houseObj = data[1] -- Due to exports not returning 2 things correct, gotta return it in a single object then set it after value is returned
+POIOffsets = data[2] -- Due to exports not returning 2 things correct, gotta return it in a single object then set it after value is returned
 property.spawn = coords -- Storing a reference to the spawn locale
 PlayerEnteredHouse(property, hasKey) -- Calling function that handles anything that I want to be done while they're in the property. IE inventory, clothes, logout, etc
 

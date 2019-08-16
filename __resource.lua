@@ -7,15 +7,10 @@ client_scripts {
 }
  
 files {
-    'weapons.meta',
-	'weaponanimations.meta',
-	
 	'playerhouse_hotel/playerhouse_hotel.ytyp',
-	'stream/playerhouse_tier3/playerhouse_tier3.ytyp'
+	'stream/playerhouse_hotel/playerhouse_hotel.ytyp',
+	'stream/playerhouse_tier3/playerhouse_tier3.ytyp',
 }
-
-data_file 'WEAPONINFO_FILE_PATCH' 'weapons.meta'
-data_file 'WEAPON_ANIMATIONS_FILE' 'weaponanimations.meta'
 
 data_file 'DLC_ITYP_REQUEST' 'stream/v_int_20.ytyp'
 data_file 'DLC_ITYP_REQUEST' 'stream/playerhouse_hotel/playerhouse_hotel.ytyp'
