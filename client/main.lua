@@ -1,9 +1,13 @@
-function DespawnInterior(objects)
-    for k, v in pairs(objects) do
-        if DoesEntityExist(v) then
-            DeleteEntity(v)
+function DespawnInterior(objects, cb)
+    Citizen.CreateThread(function()
+        for k, v in pairs(objects) do
+            if DoesEntityExist(v) then
+                DeleteEntity(v)
+            end
         end
-    end
+
+        cb()
+    end)
 end
 
 function TeleportToInterior(x, y, z, h)
