@@ -64,13 +64,18 @@ end
 
 function CreateTier3House(spawn, isBackdoor)
     local objects = {}
+
     local POIOffsets = {}
+    POIOffsets.exit = json.decode('{"y":7.7457427978516,"z":7.2074546813965,"x":-17.097534179688}')
 
     local shell = CreateObject(`playerhouse_tier3`, spawn.x, spawn.y, spawn.z, false, false, false)
-    FreezeEntityPosition(shell, true)
-
     table.insert(objects, shell)
 
+    local windows1 = CreateObject(`v_16_high_lng_over_shadow`, spawn.x + 10.16043000, spawn.y + -4.83294600, spawn.z + 5.19192700, false, false, false)
+    table.insert(objects, windows1)
+
+    FreezeEntityPosition(shell, true)
+    FreezeEntityPosition(windows1, true)
 
     if not isBackdoor then
         TeleportToInterior(spawn.x + 3.69693000, spawn.y - 15.080020100, spawn.z + 1.5, spawn.h)

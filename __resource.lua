@@ -21,6 +21,8 @@ exports {
 	'DespawnInterior',
 	'CreateMotel',
 	'CreateTier1House',
-	'CreateTier1HouseFurnished',
 	'CreateTier2House',
+	'CreateTier3House',
+
+	'CreateTier1HouseFurnished',
 }
